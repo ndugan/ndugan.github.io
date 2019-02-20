@@ -1,21 +1,14 @@
-{% if site.style == 'dark' %}
-  {% assign icon_color = "#ffffff" %}
-{% else %}
-  {% assign icon_color = "#24292e" %}
-{% endif %}
+<nav id="my-menu">
+  <div>
+    <p>{{ site.title }}</p>
 
-{% assign content = page.content | strip_newlines %}
+    <ul class="pages">
+      <li><a href="{{ site.baseurl }}/"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="{{ site.baseurl }}/posts/"><i class="fa fa-archive"></i> All Posts</a></li>
+      <li><a href="{{ site.baseurl }}/search/"><i class="fa fa-search"></i> Search</a></li>
+    </ul>
 
-{% assign posts_total = site.posts | size %}
-
-{% assign user = site.github.owner %}
-
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ user.name }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="{{ "/assets/styles.css" | absolute_url }}" rel="stylesheet" type="text/css">
-  </head>
-  <body class="bg-white" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
+    {% include social_links.html %}
+  </div>
+</nav>
+<div class="menu-button" href="#menu"><i class="fa fa-bars"></i></div>
