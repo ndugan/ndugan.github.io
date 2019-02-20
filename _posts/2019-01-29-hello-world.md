@@ -1,8 +1,6 @@
 ---
-title: "Welcome to Jekyll!"
-published: false
+title: "Thoughts on a Data Center Move to AWS"
+published: true
 ---
 
-**Hello world**, this is my first Jekyll blog post.
-
-I hope you like it!
+This blog will walk people through the different challenges I encountered while moving our data center to the cloud.
